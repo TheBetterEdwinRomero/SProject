@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Used provide an object with changing data
+/// </summary>
 public class BasicMover : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    Vector3 v;
+    // Use this for initialization
+    void Start () {
+        v = new Vector3(0, 0, 1);
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
+        transform.Translate(v * Time.deltaTime);
+        v.z += 0.1f;
 	}
 }
