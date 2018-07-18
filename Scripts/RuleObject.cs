@@ -11,6 +11,7 @@ namespace Assets.Scripts
     /// This object uses collections of facts as a key and a user made
     /// string as the value.
     /// </summary>
+    /// 
     public class RuleObject : ScriptableObject
     {
         public int FactCount
@@ -33,10 +34,11 @@ namespace Assets.Scripts
             FactCount = facts.Length;
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+
     }
 }
-
-/*
-Fact object made, made it to form KV pair.
-TODO: implement fact collection to create a rule     
-*/

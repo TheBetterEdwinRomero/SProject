@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Assets.Scripts
 {
     /// <summary>
-    /// This is where objects build queries in game
+    /// This is where objects build queries in game using existing Rules
     /// </summary>
     public class QueryController : MonoBehaviour
     {
