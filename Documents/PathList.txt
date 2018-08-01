@@ -1,0 +1,37 @@
+Starting
+-Create Objects
+
+PathA1
+-RuleBuilder Class
+-Create Rule Button
+
+PathB1
+-Query Creation Button
+
+PathC1
+-Custom Window
+-UpdateWindowOnSelect	
+
+CritPath(Longest Path)
+-Custom Wndow
+-Display Rules
+-Display Rule Data(Facts)
+
+Ending
+-Demo Scene
+
+
+ 			 	 Create Objects
+                     	      /      |	     \ 
+			    /        |         \
+		CustomWindow	QueryBuilder	RuleBuilder
+	       /           \            |               |
+	     /		     \          |               |
+UpdateWindowOnSelect	Display Rules	|		RuleBuilderButton
+       |                      |         |                /
+       |                      |         |              /  
+       | 	DisplayRuleData(Facts)  |            /    		
+       |                             \  |          /                      		
+        \                              \|        /       		
+          \                             |      /          		
+	    \__________________________Demo Scene
