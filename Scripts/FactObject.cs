@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 
 
-
 /// <summary>
 /// This object is used to store state and create queries.
 /// It is the primitive type to create a Rule object.
 /// Made of only Context and a Value
 /// </summary>
+[Serializable]
 public class FactObject
 {
     /// <summary>
@@ -18,35 +18,14 @@ public class FactObject
     /// </summary>
     /// <param name="context"></param>
     /// <param name="varient"></param>    
-    public FactObject(string context, Object varient)
+    public FactObject(string context = "", string varient = "")
     {
         this.Context = context;
         this.VarientValue = varient;
     }
 
-    public Object VarientValue
-    {
-        get
-        {
-            return VarientValue;
-        }
-        private set
-        {
-            VarientValue = value;
-        }
-    }
+    public string Context;
+    public string VarientValue;
 
-    public string Context
-    {
-        get
-        {
-            return Context;
-        }
-
-        private set
-        {
-            Context = value;
-        }
-    }
 }
 

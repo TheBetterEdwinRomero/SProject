@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+
 namespace Assets.Scripts
 {
     /// <summary>
@@ -12,7 +13,8 @@ namespace Assets.Scripts
     /// string as the value.
     /// </summary>
     /// 
-    public class RuleObject : ScriptableObject
+    [Serializable]
+    public class RuleObject
     {
         public int FactCount
         {
@@ -25,20 +27,25 @@ namespace Assets.Scripts
                 FactCount = value;
             }
         }
-        public FactObject[] Facts;
-        public string Response;
 
-        public RuleObject(FactObject[] facts, System.Object value)
+        public string Response;
+        public List<FactObject> Facts = new List<FactObject>();
+
+        public RuleObject(List<FactObject> facts, System.Object value )
         {
             this.Facts = facts;
-            FactCount = facts.Length;
+            FactCount = facts.Count;
         }
 
         public override string ToString()
         {
-            return base.ToString();
+
+            return Response + " Size " + FactCount;
         }
 
 
     }
 }
+/*
+ http://va.lent.in/unity-make-your-lists-functional-with-reorderablelist/
+ */
